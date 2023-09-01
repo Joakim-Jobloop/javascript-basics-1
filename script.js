@@ -113,7 +113,7 @@ function giveInsult() {
         "Morra di!",
     ]
 
-    const randomNumber = Math.round(Math.random() * insultsArray.length - 1)
+    const randomNumber = Math.floor((Math.random() * insultsArray.length))
     const insult = insultsArray[randomNumber]
     return insult
 }
