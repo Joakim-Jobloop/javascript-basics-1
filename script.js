@@ -56,7 +56,7 @@ if (age >= 16) {
 } else {
   bilettPris = 90;
 }
-
+  //Dette er konsoll logget med en template literal metode
 console.log(`bilettprisen for personen er: ${bilettPris} `)
 
 ////////////////////////
@@ -65,6 +65,7 @@ let randomNumber = (Math.random() * 5) + 1
 let roundedNumber = Math.round(randomNumber)
 
 if (roundedNumber > 3) {
+  //Dette er konsoll logget med en string literal metode
 console.log("Nice terningskast! " + roundedNumber)
 } else {
     console.log("Omg for en dritterning! " +  roundedNumber)
@@ -96,8 +97,8 @@ console.log(sum)
 
 ////////////////////////////
 
-function getRandomNumber(maxNumber) {
-    return console.log(Math.round(Math.random() * maxNumber + 1))
+function getRandomNumber(maxNumber, minNumber) {
+    return console.log(Math.floor(Math.random() * maxNumber) + minNumber)
 }
 
 getRandomNumber(1000)
@@ -112,7 +113,7 @@ function giveInsult() {
         "Kan du bare drite 24 øl?",
         "Morra di!",
     ]
-
+    // const randomNumber = getRandomNumber(insultArray.length, 0);
     const randomNumber = Math.floor((Math.random() * insultsArray.length))
     const insult = insultsArray[randomNumber]
     return insult
